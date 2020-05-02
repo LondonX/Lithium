@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body{
+            with:210mm;
+            min-height: 267mm;
+            display:flex;
+            flex-direction:column;
+        }
+        h1{
+            margin: 0px;
+            margin-bottom:4mm;
+            align-self:center;
+        }
+        p{
+            margin: 0px;
+            margin-top:0.8mm;
+            margin-bottom:0.8mm;
+        }
+        div.row{
+            display:flex;
+            flex-direction:row;
+        }
+        u{
+            text-underline-position: under;
+        }
+        p.draft{
+            transform: rotate(-30deg);
+            align-self: center;
+            font-size: 42px;
+            color: #0001;
+        }
+        div.draftContainer{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+<h1>项 目 收 据</h1>
+<div style="position: absolute;width: 100%;visibility: ${draftVisibility};width:800px;align-self:center">
+    <div class="draftContainer">
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+    </div>
+    <div class="draftContainer">
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+    </div>
+    <div class="draftContainer">
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+    </div>
+    <div class="draftContainer">
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+        <p class="draft">草稿作废</p>
+    </div>
+</div>
+<p style="margin-top:24px;">
+    今收到<u> ${payer} </u>的<u> ${item} </u>：人民币（大写）<u> ${cappedAmount} </u>小写<u> ${rawAmount}元 </u>。
+</p>
+<p>收款人<u> ${receiver} </u></p>
+<div class="row" style="align-self:flex-end;margin-top:24px;">
+    <p>收款人签名：</p>
+    <img style="width: 160px;height: 90px;align-self: center;margin-left: 8px;margin-top: -24px;"
+         src="${signature}" alt="">
+</div>
+<div class="row" style="align-self:flex-end;">
+    <p>日期：</p>
+    <p style="min-width: 160px;"><u> ${date} </u></p>
+</div>
+</body>
+</html>
